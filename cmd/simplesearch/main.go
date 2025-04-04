@@ -1,0 +1,11 @@
+package main
+
+/*
+
+THIS PROJECT WAS CREATED AS AN EXAMPLE IMPLEMENTATION OF ELASTICSEARCH IN GOLANG
+
+*/
+
+func main() {
+
+}
