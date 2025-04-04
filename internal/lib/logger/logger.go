@@ -5,6 +5,9 @@ import (
 	"os"
 )
 
+// Creates a new Logger.
+//
+// Environment must be specified with env variable.
 func New(env string) *slog.Logger {
 	var log *slog.Logger
 
