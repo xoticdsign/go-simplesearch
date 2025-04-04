@@ -20,7 +20,7 @@ type App struct {
 }
 
 // Creates a new SimpleSearch App.
-func New(log *slog.Logger, cfg utils.Config) *App {
+func New(log *slog.Logger, cfg utils.Config) (*App, error) {
 	server := fiber.New(fiber.Config{
 		ReadTimeout:  cfg.ReadTimeout,
 		WriteTimeout: cfg.WriteTimeout,
@@ -31,16 +31,21 @@ func New(log *slog.Logger, cfg utils.Config) *App {
 
 	// TODO: IMPLEMENT HANDLERS
 
+	service, err := simplesearch.New(log, cfg)
+	if err != nil {
+		return &App{}, err
+	}
+
 	return &App{
 		Server: ssv1.Server{
 			ServerImplementation: server,
-			Service:              simplesearch.New(log),
+			Service:              service,
 		},
 		Client: ssv1.Client{},
 
 		log:    log,
 		config: cfg,
-	}
+	}, nil
 }
 
 func errHandler(c *fiber.Ctx, err error) error {

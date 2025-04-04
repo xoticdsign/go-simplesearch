@@ -6,7 +6,7 @@ import (
 	"github.com/ilyakaznacheev/cleanenv"
 )
 
-// App Config struct.
+// App Config Struct.
 type Config struct {
 	Host         string        `yaml:"host"`
 	Port         string        `yaml:"port"`
@@ -14,6 +14,28 @@ type Config struct {
 	WriteTimeout time.Duration `yaml:"write_timeout"`
 	IdleTimeout  time.Duration `yaml:"idle_timeout"`
 	ServiceName  string        `yaml:"service_name"`
+
+	ElasticSearch ElasticSearch `yaml:"elasticsearch"`
+}
+
+// ElasticSearch Struct.
+type ElasticSearch struct {
+	Addresses []string `yaml:"addresses"`
+	Username  string
+	Password  string
+	Transport ESTransport `yaml:"transport"`
+}
+
+// ElasticSearch Transport Struct.
+type ESTransport struct {
+	TLS         ESTransportTLS `yaml:"tls"`
+	TLSTimeout  time.Duration  `yaml:"tls_timeout"`
+	IdleTimeout time.Duration  `yaml:"idle_timeout"`
+}
+
+// ElasticSearch Transport TLS Struct.
+type ESTransportTLS struct {
+	Insecure bool `yaml:"tls_insecure"`
 }
 
 // Loads Config from .yaml file.

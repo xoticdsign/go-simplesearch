@@ -15,26 +15,31 @@ import (
 type App struct {
 	SimpleSearch *httpsss.App
 
-	log *slog.Logger
+	log    *slog.Logger
+	config utils.Config
 }
 
 // Creates a new App.
 //
 // Returns App Struct, if everything's ok. Returns Error, if something went wrong while creating one of the components.
-func New(env string) (App, error) {
+func New(env string) (*App, error) {
 	cfg, err := utils.MustLoadConfig(env)
 	if err != nil {
-		return App{}, err
+		return &App{}, err
 	}
 
 	log := logger.New(env)
 
-	ss := httpsss.New(log, cfg)
+	ss, err := httpsss.New(log, cfg)
+	if err != nil {
+		return &App{}, err
+	}
 
-	return App{
+	return &App{
 		SimpleSearch: ss,
 
-		log: log,
+		log:    log,
+		config: cfg,
 	}, nil
 }
 
