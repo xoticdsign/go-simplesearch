@@ -1,6 +1,8 @@
 package utils
 
 import (
+	"fmt"
+	"os"
 	"time"
 
 	"github.com/ilyakaznacheev/cleanenv"
@@ -57,6 +59,19 @@ func MustLoadConfig(env string) (Config, error) {
 			return Config{}, err
 		}
 	}
+
+	esUsername := os.Getenv("ES_USERNAME")
+	defer os.Unsetenv("ES_USERNAME")
+
+	esPassword := os.Getenv("ES_PASSWORD")
+	defer os.Unsetenv("ES_PASSWORD")
+
+	if esUsername == "" || esPassword == "" {
+		return Config{}, fmt.Errorf("following env variables for elasticsearch must be set: ES_USERNAME, ES_PASSWORD")
+	}
+
+	cfg.ElasticSearch.Username = esUsername
+	cfg.ElasticSearch.Password = esPassword
 
 	return cfg, nil
 }

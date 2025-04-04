@@ -10,6 +10,7 @@ import (
 	"github.com/xoticdsign/simplesearch/internal/utils"
 )
 
+// ElasticSearch Service Struct.
 type Service struct {
 	ESClient *elasticsearch.Client
 
@@ -17,6 +18,7 @@ type Service struct {
 	config utils.Config
 }
 
+// Creates a new ElasticSearch Service.
 func New(log *slog.Logger, cfg utils.Config) (*Service, error) {
 	es, err := elasticsearch.NewClient(elasticsearch.Config{
 		Addresses: cfg.ElasticSearch.Addresses,

@@ -1,6 +1,7 @@
 package simplesearch
 
 import (
+	"context"
 	"log/slog"
 
 	search "github.com/xoticdsign/simplesearch/internal/services/elasticsearch"
@@ -33,4 +34,10 @@ func New(log *slog.Logger, cfg utils.Config) (*Service, error) {
 		log:    log,
 		config: cfg,
 	}, nil
+}
+
+func (s *Service) MakeSearch(ctx context.Context, searchFor string) (string, error) {
+	// TODO: REQUEST TO ELASTICSEARCH
+
+	return "", nil
 }
