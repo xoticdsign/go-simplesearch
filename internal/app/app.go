@@ -11,7 +11,11 @@ import (
 	"github.com/xoticdsign/simplesearch/internal/utils"
 )
 
-// App Struct.
+const op = "app."
+
+// App Struct represents the entire application.
+//
+// It contains the SimpleSearch service and manages the application's lifecycle (initialization, running, and shutdown).
 type App struct {
 	SimpleSearch *httpsss.App
 
@@ -19,9 +23,10 @@ type App struct {
 	config utils.Config
 }
 
-// Creates a new App.
+// New() creates a new instance of the App.
 //
-// Returns App Struct, if everything's ok. Returns Error, if something went wrong while creating one of the components.
+// It loads the configuration based on the provided environment, initializes the logger,
+// and creates the SimpleSearch application. Returns the App struct or an error if any step fails.
 func New(env string) (*App, error) {
 	cfg, err := utils.MustLoadConfig(env)
 	if err != nil {
@@ -43,10 +48,13 @@ func New(env string) (*App, error) {
 	}, nil
 }
 
-// Runs the App.
+// Run() starts the application and handles the main application flow.
 //
-// Each part of the App starts in a separate goroutine and then Run function waits for SIGTERM/SIGINT or an Error to occur to proceed. After Signal or an Error has been received, Run function call for shutdown and shuts down gracefully.
+// It starts the SimpleSearch app in a separate goroutine and listens for termination signals (SIGTERM, SIGINT).
+// If an error occurs or a shutdown signal is received, it proceeds to shut down the application gracefully.
 func (a *App) Run() error {
+	const fu = "Run()"
+
 	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, syscall.SIGTERM, syscall.SIGINT)
 
@@ -62,13 +70,15 @@ func (a *App) Run() error {
 	select {
 	case err := <-errChan:
 		a.log.Error(
-			"will shutdown, because an error occurred while running simplesearch server",
+			"will shutdown, because an error occurred while running",
+			slog.String("op", op+fu),
 			slog.String("error", err.Error()),
 		)
 
 	case <-sigChan:
 		a.log.Info(
 			"signaled to shutdown",
+			slog.String("op", op+fu),
 		)
 	}
 
@@ -79,12 +89,17 @@ func (a *App) Run() error {
 	return nil
 }
 
-// Shuts down the App.
+// Shuts down the application gracefully.
+//
+// It stops the SimpleSearch service and handles any errors that may occur during the shutdown process.
 func (a *App) shutdown() error {
+	const fu = "shutdown()"
+
 	err := a.SimpleSearch.Shutdown()
 	if err != nil {
 		a.log.Error(
 			"error occurred while trying to shutdown gracefully",
+			slog.String("op", op+fu),
 			slog.String("error", err.Error()),
 		)
 

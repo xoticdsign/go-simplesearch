@@ -19,11 +19,18 @@ type Handlerer interface{}
 type UnimplementedHandlers struct{}
 
 type MakeSearchRequest struct {
-	SearchFor string `json:"search_for"`
+	SearchFor string                   `json:"search_for"`
+	Filters   MakeSearchRequestFilters `json:"filters"`
+}
+
+type MakeSearchRequestFilters struct {
+	PriceBottom float64 `json:"price_bottom"`
+	PriceTop    float64 `json:"price_top"`
 }
 
 type MakeSearchResponse struct {
-	Result string `json:"result"`
+	Message string      `json:"message"`
+	Result  interface{} `json:"result"`
 }
 
 func (u *UnimplementedHandlers) MakeSearch(c *fiber.Ctx) error {
