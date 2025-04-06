@@ -29,34 +29,14 @@ var (
 // Constant representing the ElasticSearch Products index name.
 const iProducts = "products"
 
-// CustomTime is a wrapper around time. Time to handle time parsing without time zones.
-type CustomTime struct {
-	time.Time
-}
-
-// UnmarshalJSON custom unmarshal method for CustomTime that parses time in the format
-// "2006-01-02T15:04:05" (without a timezone).
-func (c *CustomTime) UnmarshalJSON(b []byte) error {
-	layoutWithoutTimezone := "2006-01-02T15:04:05"
-
-	parsedTime, err := time.Parse(`"`+layoutWithoutTimezone+`"`, string(b))
-	if err != nil {
-		return fmt.Errorf("error parsing time %s: %w", string(b), err)
-	}
-
-	c.Time = parsedTime
-
-	return nil
-}
-
 // Product struct represents a product with its properties that will be unmarshaled from Elasticsearch.
 type Product struct {
-	Name        string     `json:"name"`
-	Description string     `json:"description"`
-	Price       float64    `json:"price"`
-	Category    string     `json:"category"`
-	Stock       int        `json:"stock"`
-	CreatedAt   CustomTime `json:"created_at"`
+	Name        string    `json:"name"`
+	Description string    `json:"description"`
+	Price       float64   `json:"price"`
+	Category    string    `json:"category"`
+	Stock       int       `json:"stock"`
+	CreatedAt   time.Time `json:"created_at"`
 }
 
 var (

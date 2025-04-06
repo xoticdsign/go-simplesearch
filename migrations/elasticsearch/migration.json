@@ -1,0 +1,160 @@
+{ "index": { "_index": "products", "_id": 1 } }
+{ "category": "laptop", "created_at": "2023-01-15T00:00:00Z", "description": "Thin and light laptop with 13.3-inch display, 16GB RAM, and 512GB SSD", "id": 1, "name": "Apple MacBook Air M2", "price": 1199.99, "stock": 45 }
+{ "index": { "_index": "products", "_id": 2 } }
+{ "category": "mouse", "created_at": "2023-02-20T00:00:00Z", "description": "Wireless ergonomic mouse with customizable buttons and precision tracking", "id": 2, "name": "Logitech MX Master 3", "price": 99.99, "stock": 120 }
+{ "index": { "_index": "products", "_id": 3 } }
+{ "category": "keyboard", "created_at": "2023-03-10T00:00:00Z", "description": "Mechanical gaming keyboard with RGB lighting and tactile switches", "id": 3, "name": "Razer BlackWidow V3", "price": 139.99, "stock": 75 }
+{ "index": { "_index": "products", "_id": 4 } }
+{ "category": "monitor", "created_at": "2023-01-05T00:00:00Z", "description": "27-inch 4K UHD IPS monitor with HDR and 99% sRGB coverage", "id": 4, "name": "Dell Ultrasharp U2723QE", "price": 649.99, "stock": 30 }
+{ "index": { "_index": "products", "_id": 5 } }
+{ "category": "headphones", "created_at": "2023-04-18T00:00:00Z", "description": "Wireless noise-canceling headphones with 30-hour battery life", "id": 5, "name": "Sony WH-1000XM5", "price": 399.99, "stock": 60 }
+{ "index": { "_index": "products", "_id": 6 } }
+{ "category": "laptop", "created_at": "2023-03-22T00:00:00Z", "description": "Business laptop with 14-inch display, 32GB RAM, and 1TB SSD", "id": 6, "name": "Lenovo ThinkPad X1 Carbon Gen 10", "price": 1899.99, "stock": 25 }
+{ "index": { "_index": "products", "_id": 7 } }
+{ "category": "mouse", "created_at": "2023-02-15T00:00:00Z", "description": "Lightweight gaming mouse with 25K DPI optical sensor", "id": 7, "name": "Razer Viper V2 Pro", "price": 149.99, "stock": 85 }
+{ "index": { "_index": "products", "_id": 8 } }
+{ "category": "keyboard", "created_at": "2023-01-30T00:00:00Z", "description": "Compact 65% mechanical keyboard with hot-swappable switches", "id": 8, "name": "Keychron K6", "price": 79.99, "stock": 110 }
+{ "index": { "_index": "products", "_id": 9 } }
+{ "category": "monitor", "created_at": "2023-04-05T00:00:00Z", "description": "34-inch ultrawide QHD curved gaming monitor with 144Hz refresh rate", "id": 9, "name": "LG 34GN850-B", "price": 899.99, "stock": 20 }
+{ "index": { "_index": "products", "_id": 10 } }
+{ "category": "headphones", "created_at": "2023-03-18T00:00:00Z", "description": "Premium wireless headphones with active noise cancellation", "id": 10, "name": "Bose QuietComfort 45", "price": 329.99, "stock": 50 }
+{ "index": { "_index": "products", "_id": 11 } }
+{ "category": "laptop", "created_at": "2023-02-10T00:00:00Z", "description": "High-performance gaming laptop with RTX 3080 and 17.3-inch display", "id": 11, "name": "ASUS ROG Zephyrus Duo 16", "price": 3499.99, "stock": 15 }
+{ "index": { "_index": "products", "_id": 12 } }
+{ "category": "mouse", "created_at": "2023-03-25T00:00:00Z", "description": "Ambidextrous wired gaming mouse with ultra-low latency", "id": 12, "name": "SteelSeries Sensei Ten", "price": 69.99, "stock": 95 }
+{ "index": { "_index": "products", "_id": 13 } }
+{ "category": "keyboard", "created_at": "2023-01-18T00:00:00Z", "description": "Wireless mechanical keyboard with low-profile switches and multi-device pairing", "id": 13, "name": "Logitech MX Mechanical", "price": 169.99, "stock": 55 }
+{ "index": { "_index": "products", "_id": 14 } }
+{ "category": "monitor", "created_at": "2023-02-05T00:00:00Z", "description": "32-inch 1440p gaming monitor with 165Hz refresh rate and G-SYNC", "id": 14, "name": "Gigabyte M32Q", "price": 349.99, "stock": 40 }
+{ "index": { "_index": "products", "_id": 15 } }
+{ "category": "headphones", "created_at": "2023-03-01T00:00:00Z", "description": "Open-back studio headphones with wide frequency response", "id": 15, "name": "Sennheiser HD 660S", "price": 499.99, "stock": 35 }
+{ "index": { "_index": "products", "_id": 16 } }
+{ "category": "laptop", "created_at": "2023-04-12T00:00:00Z", "description": "Convertible 2-in-1 laptop with touch screen and stylus support", "id": 16, "name": "HP Spectre x360 14", "price": 1599.99, "stock": 38 }
+{ "index": { "_index": "products", "_id": 17 } }
+{ "category": "mouse", "created_at": "2023-02-25T00:00:00Z", "description": "Bluetooth travel mouse with compact design and long battery life", "id": 17, "name": "Microsoft Arc Mouse", "price": 79.99, "stock": 70 }
+{ "index": { "_index": "products", "_id": 18 } }
+{ "category": "keyboard", "created_at": "2023-04-01T00:00:00Z", "description": "RGB mechanical keyboard with dedicated macro keys", "id": 18, "name": "Corsair K95 RGB Platinum XT", "price": 199.99, "stock": 45 }
+{ "index": { "_index": "products", "_id": 19 } }
+{ "category": "monitor", "created_at": "2023-03-11T00:00:00Z", "description": "Portable 15.6-inch USB-C monitor with FHD resolution", "id": 19, "name": "ASUS ZenScreen MB16AC", "price": 249.99, "stock": 65 }
+{ "index": { "_index": "products", "_id": 20 } }
+{ "category": "headphones", "created_at": "2023-01-28T00:00:00Z", "description": "True wireless earbuds with ANC and wireless charging", "id": 20, "name": "Apple AirPods Pro 2", "price": 249.99, "stock": 100 }
+{ "index": { "_index": "products", "_id": 21 } }
+{ "category": "laptop", "created_at": "2023-03-05T00:00:00Z", "description": "Lightweight ultrabook with OLED display and long battery life", "id": 21, "name": "Dell XPS 13 Plus", "price": 1899.99, "stock": 28 }
+{ "index": { "_index": "products", "_id": 22 } }
+{ "category": "mouse", "created_at": "2023-02-14T00:00:00Z", "description": "High-DPI gaming mouse with customizable side buttons", "id": 22, "name": "Corsair Scimitar RGB Elite", "price": 79.99, "stock": 60 }
+{ "index": { "_index": "products", "_id": 23 } }
+{ "category": "keyboard", "created_at": "2023-01-20T00:00:00Z", "description": "Compact 60% wireless keyboard with hot-swappable switches", "id": 23, "name": "Anne Pro 2", "price": 99.99, "stock": 75 }
+{ "index": { "_index": "products", "_id": 24 } }
+{ "category": "monitor", "created_at": "2023-04-04T00:00:00Z", "description": "49-inch ultra-wide curved monitor with 5120x1440 resolution", "id": 24, "name": "Samsung Odyssey G9", "price": 1399.99, "stock": 22 }
+{ "index": { "_index": "products", "_id": 25 } }
+{ "category": "headphones", "created_at": "2023-03-09T00:00:00Z", "description": "Closed-back headphones with detachable cable and studio-grade audio", "id": 25, "name": "Audio-Technica ATH-M50x", "price": 149.99, "stock": 85 }
+{ "index": { "_index": "products", "_id": 26 } }
+{ "category": "laptop", "created_at": "2023-01-30T00:00:00Z", "description": "Business-class laptop with 13th Gen Intel CPU and security features", "id": 26, "name": "Lenovo ThinkPad X1 Carbon Gen 11", "price": 2099.99, "stock": 33 }
+{ "index": { "_index": "products", "_id": 27 } }
+{ "category": "mouse", "created_at": "2023-02-22T00:00:00Z", "description": "Vertical ergonomic mouse with advanced tracking and USB-C", "id": 27, "name": "Logitech Lift", "price": 69.99, "stock": 50 }
+{ "index": { "_index": "products", "_id": 28 } }
+{ "category": "keyboard", "created_at": "2023-04-03T00:00:00Z", "description": "Wireless keyboard with solar charging and quiet keys", "id": 28, "name": "Logitech K750", "price": 59.99, "stock": 90 }
+{ "index": { "_index": "products", "_id": 29 } }
+{ "category": "monitor", "created_at": "2023-01-26T00:00:00Z", "description": "Budget 24-inch 1080p monitor with IPS panel", "id": 29, "name": "Acer R240HY", "price": 139.99, "stock": 100 }
+{ "index": { "_index": "products", "_id": 30 } }
+{ "category": "headphones", "created_at": "2023-02-17T00:00:00Z", "description": "On-ear Bluetooth headphones with integrated mic and fast charging", "id": 30, "name": "JBL Live 460NC", "price": 129.99, "stock": 60 }
+{ "index": { "_index": "products", "_id": 31 } }
+{ "category": "laptop", "created_at": "2023-04-10T00:00:00Z", "description": "Convertible 2-in-1 laptop with stylus support and touchscreen", "id": 31, "name": "HP Spectre x360 14", "price": 1699.99, "stock": 27 }
+{ "index": { "_index": "products", "_id": 32 } }
+{ "category": "mouse", "created_at": "2023-03-13T00:00:00Z", "description": "Compact wireless mouse for travel with silent buttons", "id": 32, "name": "Microsoft Modern Mobile Mouse", "price": 34.99, "stock": 45 }
+{ "index": { "_index": "products", "_id": 33 } }
+{ "category": "keyboard", "created_at": "2023-03-02T00:00:00Z", "description": "Mechanical keyboard with clicky blue switches and RGB backlight", "id": 33, "name": "Razer BlackWidow V3", "price": 139.99, "stock": 70 }
+{ "index": { "_index": "products", "_id": 34 } }
+{ "category": "monitor", "created_at": "2023-02-25T00:00:00Z", "description": "32-inch 4K UHD monitor with HDR support and USB-C", "id": 34, "name": "LG UltraFine 32UN880-B", "price": 699.99, "stock": 35 }
+{ "index": { "_index": "products", "_id": 35 } }
+{ "category": "headphones", "created_at": "2023-04-01T00:00:00Z", "description": "Sports earbuds with water resistance and ear hooks", "id": 35, "name": "Beats Powerbeats Pro", "price": 199.99, "stock": 48 }
+{ "index": { "_index": "products", "_id": 36 } }
+{ "category": "laptop", "created_at": "2023-03-21T00:00:00Z", "description": "High-performance gaming laptop with AMD Ryzen CPU and RTX GPU", "id": 36, "name": "ASUS ROG Zephyrus G14", "price": 2199.99, "stock": 20 }
+{ "index": { "_index": "products", "_id": 37 } }
+{ "category": "mouse", "created_at": "2023-01-18T00:00:00Z", "description": "Ambidextrous wired mouse with RGB lighting and high polling rate", "id": 37, "name": "SteelSeries Sensei Ten", "price": 59.99, "stock": 52 }
+{ "index": { "_index": "products", "_id": 38 } }
+{ "category": "keyboard", "created_at": "2023-02-11T00:00:00Z", "description": "Ergonomic keyboard with split design and palm rest", "id": 38, "name": "Kinesis Freestyle2", "price": 99.99, "stock": 41 }
+{ "index": { "_index": "products", "_id": 39 } }
+{ "category": "monitor", "created_at": "2023-03-19T00:00:00Z", "description": "Professional-grade 27-inch color-accurate monitor", "id": 39, "name": "BenQ PD2700U", "price": 599.99, "stock": 25 }
+{ "index": { "_index": "products", "_id": 40 } }
+{ "category": "headphones", "created_at": "2023-01-27T00:00:00Z", "description": "Wireless ANC headphones with support for aptX and long battery life", "id": 40, "name": "Sennheiser Momentum 4", "price": 349.99, "stock": 39 }
+{ "index": { "_index": "products", "_id": 41 } }
+{ "category": "laptop", "created_at": "2023-03-15T00:00:00Z", "description": "Thin and light ultrabook with Intel Evo certification", "id": 41, "name": "Acer Swift 5", "price": 1249.99, "stock": 33 }
+{ "index": { "_index": "products", "_id": 42 } }
+{ "category": "mouse", "created_at": "2023-01-29T00:00:00Z", "description": "Lightweight gaming mouse with honeycomb shell", "id": 42, "name": "Glorious Model O", "price": 49.99, "stock": 60 }
+{ "index": { "_index": "products", "_id": 43 } }
+{ "category": "keyboard", "created_at": "2023-04-04T00:00:00Z", "description": "Low-profile wireless keyboard with media controls", "id": 43, "name": "Keychron K3", "price": 89.99, "stock": 38 }
+{ "index": { "_index": "products", "_id": 44 } }
+{ "category": "monitor", "created_at": "2023-02-08T00:00:00Z", "description": "34-inch curved ultrawide monitor for immersive productivity", "id": 44, "name": "Gigabyte M34WQ", "price": 499.99, "stock": 28 }
+{ "index": { "_index": "products", "_id": 45 } }
+{ "category": "headphones", "created_at": "2023-03-11T00:00:00Z", "description": "Studio monitor headphones with flat frequency response", "id": 45, "name": "Sony MDR-7506", "price": 99.99, "stock": 55 }
+{ "index": { "_index": "products", "_id": 46 } }
+{ "category": "laptop", "created_at": "2023-04-06T00:00:00Z", "description": "Business laptop with vPro support and military-grade durability", "id": 46, "name": "Lenovo ThinkPad X1 Carbon", "price": 1799.99, "stock": 22 }
+{ "index": { "_index": "products", "_id": 47 } }
+{ "category": "mouse", "created_at": "2023-02-15T00:00:00Z", "description": "Rechargeable wireless mouse with side scroll wheel", "id": 47, "name": "Logitech MX Anywhere 3", "price": 79.99, "stock": 43 }
+{ "index": { "_index": "products", "_id": 48 } }
+{ "category": "keyboard", "created_at": "2023-01-22T00:00:00Z", "description": "Tenkeyless mechanical keyboard with hot-swappable switches", "id": 48, "name": "Drop CTRL", "price": 149.99, "stock": 30 }
+{ "index": { "_index": "products", "_id": 49 } }
+{ "category": "monitor", "created_at": "2023-03-09T00:00:00Z", "description": "Portable USB-C monitor for laptops and tablets", "id": 49, "name": "ASUS ZenScreen MB16AC", "price": 249.99, "stock": 44 }
+{ "index": { "_index": "products", "_id": 50 } }
+{ "category": "headphones", "created_at": "2023-02-28T00:00:00Z", "description": "Open-back reference headphones for professional mixing", "id": 50, "name": "Beyerdynamic DT 990 Pro", "price": 159.99, "stock": 36 }
+{ "index": { "_index": "products", "_id": 51 } }
+{ "category": "laptop", "created_at": "2023-04-08T00:00:00Z", "description": "2-in-1 convertible laptop with touchscreen and pen support", "id": 51, "name": "Dell Inspiron 14 7000", "price": 1049.99, "stock": 31 }
+{ "index": { "_index": "products", "_id": 52 } }
+{ "category": "mouse", "created_at": "2023-03-17T00:00:00Z", "description": "Vertical ergonomic mouse to reduce wrist strain", "id": 52, "name": "Anker Ergonomic Vertical Mouse", "price": 29.99, "stock": 70 }
+{ "index": { "_index": "products", "_id": 53 } }
+{ "category": "keyboard", "created_at": "2023-02-24T00:00:00Z", "description": "Retro-style mechanical keyboard with round keycaps", "id": 53, "name": "AZIO Retro Classic", "price": 189.99, "stock": 25 }
+{ "index": { "_index": "products", "_id": 54 } }
+{ "category": "monitor", "created_at": "2023-04-02T00:00:00Z", "description": "32-inch 4K UHD monitor with HDR10 support", "id": 54, "name": "LG 32UN650-W", "price": 399.99, "stock": 34 }
+{ "index": { "_index": "products", "_id": 55 } }
+{ "category": "headphones", "created_at": "2023-01-30T00:00:00Z", "description": "Bone conduction wireless headphones for outdoor use", "id": 55, "name": "Shokz OpenRun", "price": 129.99, "stock": 42 }
+{ "index": { "_index": "products", "_id": 56 } }
+{ "category": "laptop", "created_at": "2023-03-22T00:00:00Z", "description": "Affordable Chromebook with long battery life", "id": 56, "name": "Samsung Chromebook 4", "price": 229.99, "stock": 58 }
+{ "index": { "_index": "products", "_id": 57 } }
+{ "category": "mouse", "created_at": "2023-04-01T00:00:00Z", "description": "Ambidextrous gaming mouse with RGB lighting", "id": 57, "name": "SteelSeries Sensei Ten", "price": 59.99, "stock": 40 }
+{ "index": { "_index": "products", "_id": 58 } }
+{ "category": "keyboard", "created_at": "2023-03-25T00:00:00Z", "description": "Silent wireless keyboard and mouse combo", "id": 58, "name": "Logitech MK295", "price": 49.99, "stock": 63 }
+{ "index": { "_index": "products", "_id": 59 } }
+{ "category": "monitor", "created_at": "2023-02-20T00:00:00Z", "description": "Gaming monitor with 1ms response time and G-SYNC support", "id": 59, "name": "Alienware AW2523HF", "price": 349.99, "stock": 27 }
+{ "index": { "_index": "products", "_id": 60 } }
+{ "category": "headphones", "created_at": "2023-04-03T00:00:00Z", "description": "High-resolution wireless headphones with LDAC", "id": 60, "name": "Sony WH-H910N h.ear on 3", "price": 199.99, "stock": 39 }
+{ "index": { "_index": "products", "_id": 61 } }
+{ "category": "laptop", "created_at": "2023-03-15T00:00:00Z", "description": "15-inch gaming laptop with RTX 3060 and 16GB RAM", "id": 61, "name": "HP Omen 15", "price": 1199.99, "stock": 19 }
+{ "index": { "_index": "products", "_id": 62 } }
+{ "category": "mouse", "created_at": "2023-01-16T00:00:00Z", "description": "Lightweight, ambidextrous mouse with adjustable DPI", "id": 62, "name": "Razer DeathAdder V2", "price": 69.99, "stock": 110 }
+{ "index": { "_index": "products", "_id": 63 } }
+{ "category": "keyboard", "created_at": "2023-02-10T00:00:00Z", "description": "Mechanical keyboard with RGB backlighting and 10-key rollover", "id": 63, "name": "Corsair K95 RGB Platinum", "price": 199.99, "stock": 55 }
+{ "index": { "_index": "products", "_id": 64 } }
+{ "category": "monitor", "created_at": "2023-01-19T00:00:00Z", "description": "24-inch 1080p gaming monitor with 75Hz refresh rate", "id": 64, "name": "Acer R240HY", "price": 129.99, "stock": 78 }
+{ "index": { "_index": "products", "_id": 65 } }
+{ "category": "headphones", "created_at": "2023-04-04T00:00:00Z", "description": "Wireless noise-canceling headphones with touch controls", "id": 65, "name": "Bose Noise Cancelling Headphones 700", "price": 379.99, "stock": 22 }
+{ "index": { "_index": "products", "_id": 66 } }
+{ "category": "laptop", "created_at": "2023-02-08T00:00:00Z", "description": "Budget-friendly laptop with 15-inch display and 4GB RAM", "id": 66, "name": "HP Pavilion 15", "price": 499.99, "stock": 42 }
+{ "index": { "_index": "products", "_id": 67 } }
+{ "category": "mouse", "created_at": "2023-02-13T00:00:00Z", "description": "Ergonomic mouse with adjustable weight and 12-button layout", "id": 67, "name": "Corsair Dark Core RGB/SE", "price": 79.99, "stock": 35 }
+{ "index": { "_index": "products", "_id": 68 } }
+{ "category": "keyboard", "created_at": "2023-03-08T00:00:00Z", "description": "RGB mechanical keyboard with hot-swappable switches", "id": 68, "name": "Keychron K8", "price": 99.99, "stock": 63 }
+{ "index": { "_index": "products", "_id": 69 } }
+{ "category": "monitor", "created_at": "2023-03-30T00:00:00Z", "description": "Curved 27-inch 1440p monitor with 165Hz refresh rate", "id": 69, "name": "Samsung Odyssey LC27G55TQWNXZA", "price": 249.99, "stock": 47 }
+{ "index": { "_index": "products", "_id": 70 } }
+{ "category": "headphones", "created_at": "2023-03-21T00:00:00Z", "description": "Over-ear wireless headphones with 30-hour battery life", "id": 70, "name": "JBL Quantum 800", "price": 179.99, "stock": 68 }
+{ "index": { "_index": "products", "_id": 71 } }
+{ "category": "laptop", "created_at": "2023-03-27T00:00:00Z", "description": "High-performance gaming laptop with RTX 3080 Ti and 32GB RAM", "id": 71, "name": "Razer Blade 17", "price": 2499.99, "stock": 15 }
+{ "index": { "_index": "products", "_id": 72 } }
+{ "category": "mouse", "created_at": "2023-02-26T00:00:00Z", "description": "Precision gaming mouse with adjustable RGB lighting", "id": 72, "name": "Logitech G Pro X Superlight", "price": 129.99, "stock": 58 }
+{ "index": { "_index": "products", "_id": 73 } }
+{ "category": "keyboard", "created_at": "2023-04-02T00:00:00Z", "description": "Mechanical keyboard with silent switches and customizable RGB", "id": 73, "name": "Razer Huntsman Mini", "price": 119.99, "stock": 72 }
+{ "index": { "_index": "products", "_id": 74 } }
+{ "category": "monitor", "created_at": "2023-02-18T00:00:00Z", "description": "Ultra-wide 34-inch monitor with 144Hz refresh rate", "id": 74, "name": "Gigabyte G34WQC", "price": 379.99, "stock": 34 }
+{ "index": { "_index": "products", "_id": 75 } }
+{ "category": "headphones", "created_at": "2023-03-14T00:00:00Z", "description": "Noise-canceling wireless over-ear headphones with 20-hour battery life", "id": 75, "name": "Sony WH-XB900N", "price": 248.99, "stock": 28 }
+{ "index": { "_index": "products", "_id": 76 } }
+{ "category": "laptop", "created_at": "2023-03-30T00:00:00Z", "description": "Thin and light laptop with Intel Core i7 and 16GB RAM", "id": 76, "name": "Dell XPS 13", "price": 1499.99, "stock": 25 }
+{ "index": { "_index": "products", "_id": 77 } }
+{ "category": "mouse", "created_at": "2023-03-22T00:00:00Z", "description": "High-performance mouse with 16,000 DPI and adjustable weights", "id": 77, "name": "SteelSeries Rival 600", "price": 79.99, "stock": 80 }
+{ "index": { "_index": "products", "_id": 78 } }
+{ "category": "keyboard", "created_at": "2023-04-14T00:00:00Z", "description": "Compact 60% mechanical keyboard with hot-swappable switches", "id": 78, "name": "Akko 3068B", "price": 79.99, "stock": 55 }
+{ "index": { "_index": "products", "_id": 79 } }
+{ "category": "monitor", "created_at": "2023-03-25T00:00:00Z", "description": "32-inch 1440p monitor with 165Hz refresh rate and FreeSync support", "id": 79, "name": "Gigabyte M32Q", "price": 399.99, "stock": 40 }
+{ "index": { "_index": "products", "_id": 80 } }
+{ "category": "headphones", "created_at": "2023-04-06T00:00:00Z", "description": "In-ear wireless earbuds with noise isolation and 7-hour battery life", "id": 80, "name": "Anker Soundcore Liberty Air 2 Pro", "price": 129.99, "stock": 90 }

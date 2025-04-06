@@ -11,7 +11,7 @@ import (
 )
 
 var (
-	ErrEnvIsNotSet = fmt.Errorf("following envs must be set: DIRECTION, ADDRESS, USERNAME, PASSWORD")
+	ErrEnvIsNotSet = fmt.Errorf("following envs must be set: DIRECTION, MIGRATIONS, MIGRATE_DOWN_WITH_INDEX (optional), ADDRESS, USERNAME, PASSWORD")
 )
 
 // getEnv() retrieves the necessary environment variables required for migration.
@@ -48,9 +48,6 @@ func getEnv() (string, string, string, string, string, string, error) {
 	defer os.Unsetenv("MIGRATIONS")
 
 	migrationDownBool := os.Getenv("MIGRATE_DOWN_WITH_INDEX")
-	if direction == "" {
-		return "", "", "", "", "", "", ErrEnvIsNotSet
-	}
 	defer os.Unsetenv("MIGRATE_DOWN_WITH_INDEX")
 
 	addr := os.Getenv("ADDRESS")
