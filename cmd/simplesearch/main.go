@@ -1,8 +1,6 @@
 package main
 
 import (
-	"os"
-
 	"github.com/xoticdsign/simplesearch/internal/app"
 )
 
@@ -50,14 +48,7 @@ In summary, this project provides a straightforward example of how to build a Go
 */
 
 func main() {
-	var env string
-
-	env = os.Getenv("env")
-	if env == "" {
-		env = "local"
-	}
-
-	a, err := app.New(env)
+	a, err := app.New()
 	if err != nil {
 		panic(err)
 	}

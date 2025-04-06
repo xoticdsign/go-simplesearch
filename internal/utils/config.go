@@ -1,8 +1,6 @@
 package utils
 
 import (
-	"fmt"
-	"os"
 	"time"
 
 	"github.com/ilyakaznacheev/cleanenv"
@@ -55,7 +53,7 @@ type ESTransportTLS struct {
 // or "development", it will load respective config files (not implemented yet). If the environment is not recognized,
 // it loads a local config file. The function also retrieves ElasticSearch credentials from environment variables,
 // and sets them into the configuration. If any error occurs during the loading process, it returns an error.
-func MustLoadConfig(env string) (Config, error) {
+func MustLoadConfig(env string, esUsername string, esPassword string) (Config, error) {
 	var cfg Config
 
 	switch env {
@@ -70,16 +68,6 @@ func MustLoadConfig(env string) (Config, error) {
 		if err != nil {
 			return Config{}, err
 		}
-	}
-
-	esUsername := os.Getenv("ES_USERNAME")
-	defer os.Unsetenv("ES_USERNAME")
-
-	esPassword := os.Getenv("ES_PASSWORD")
-	defer os.Unsetenv("ES_PASSWORD")
-
-	if esUsername == "" || esPassword == "" {
-		return Config{}, fmt.Errorf("following env variables for elasticsearch must be set: ES_USERNAME, ES_PASSWORD")
 	}
 
 	cfg.ElasticSearch.Username = esUsername
