@@ -26,5 +26,5 @@ jobs:
           fi
       - name: Build and Push Image
         run: |
-          docker build -f deployments/docker/Dockerfile -t simplesearch:${VERSION} .
-          docker push simplesearch${VERSION}
+          docker build -f deployments/docker/Dockerfile -t ghcr.io/${{ github.repository }}:${VERSION} .
+          docker push ghcr.io/${{ github.repository }}:${VERSION}
