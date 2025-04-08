@@ -21,7 +21,7 @@ jobs:
           password: ${{secrets.GITHUB_TOKEN}}
       - name: Extract Version
         run: |
-          if [[ "${GITHUB_REF}" == refs/tags/api-* ]]; then
+          if [[ "${GITHUB_REF}" == refs/tags/v* ]]; then
             echo "VERSION=${GITHUB_REF##*/}" >> $GITHUB_ENV
           fi
       - name: Build and Push Image
