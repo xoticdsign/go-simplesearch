@@ -1,7 +1,6 @@
 package app
 
 import (
-	"fmt"
 	"log/slog"
 	"os"
 	"os/signal"
@@ -14,10 +13,6 @@ import (
 
 const op = "app."
 
-var (
-	ErrEnvMustBeSpecified = fmt.Errorf("you have to specify the following envs: ES_USERNAME, ES_PASSWORD")
-)
-
 // App Struct represents the entire application.
 //
 // It contains the SimpleSearch service and manages the application's lifecycle (initialization, running, and shutdown).
@@ -28,25 +23,22 @@ type App struct {
 	config utils.Config
 }
 
-func getEnv() (string, string, string, error) {
-	var env string
-
-	env = os.Getenv("ENV")
-	if env == "" {
-		env = "local"
-	}
-	defer os.Unsetenv("ENV")
-
+func getEnv() (map[string]string, error) {
+	env := os.Getenv("ENV")
+	address := os.Getenv("ADDRESS")
+	esAddress := os.Getenv("ES_ADDRESS")
 	esUsername := os.Getenv("ES_USERNAME")
-	defer os.Unsetenv("ES_USERNAME")
-
 	esPassword := os.Getenv("ES_PASSWORD")
-	defer os.Unsetenv("ES_PASSWORD")
 
-	if esUsername == "" || esPassword == "" {
-		return "", "", "", fmt.Errorf("following env variables for elasticsearch must be set: ES_USERNAME, ES_PASSWORD")
-	}
-	return env, esUsername, esPassword, nil
+	envs := make(map[string]string)
+
+	envs["env"] = env
+	envs["address"] = address
+	envs["es_address"] = esAddress
+	envs["es_username"] = esUsername
+	envs["es_password"] = esPassword
+
+	return envs, nil
 }
 
 // New() creates a new instance of the App.
@@ -54,17 +46,17 @@ func getEnv() (string, string, string, error) {
 // It loads the configuration based on the provided environment, initializes the logger,
 // and creates the SimpleSearch application. Returns the App struct or an error if any step fails.
 func New() (*App, error) {
-	env, esUsername, esPassword, err := getEnv()
+	envs, err := getEnv()
 	if err != nil {
 		return &App{}, err
 	}
 
-	cfg, err := utils.MustLoadConfig(env, esUsername, esPassword)
+	cfg, err := utils.MustLoadConfig(envs)
 	if err != nil {
 		return &App{}, err
 	}
 
-	log := logger.New(env)
+	log := logger.New(envs)
 
 	ss, err := httpsss.New(log, cfg)
 	if err != nil {

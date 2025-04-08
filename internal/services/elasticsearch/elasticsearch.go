@@ -61,7 +61,7 @@ type Service struct {
 // It initializes the ElasticSearch client with TLS and authentication settings.
 func New(log *slog.Logger, cfg utils.Config) (*Service, error) {
 	es, err := elasticsearch.NewClient(elasticsearch.Config{
-		Addresses: cfg.ElasticSearch.Addresses,
+		Addresses: []string{cfg.ElasticSearch.Address},
 		Username:  cfg.ElasticSearch.Username,
 		Password:  cfg.ElasticSearch.Password,
 		Transport: &http.Transport{

@@ -11,8 +11,7 @@ import (
 // It holds all necessary configuration parameters such as the host, port, timeouts,
 // service name, and ElasticSearch-related settings.
 type Config struct {
-	Host         string        `yaml:"host"`
-	Port         string        `yaml:"port"`
+	Address      string
 	ReadTimeout  time.Duration `yaml:"read_timeout"`
 	WriteTimeout time.Duration `yaml:"write_timeout"`
 	IdleTimeout  time.Duration `yaml:"idle_timeout"`
@@ -25,7 +24,7 @@ type Config struct {
 //
 // It contains the addresses, credentials, and transport-related settings for connecting to ElasticSearch.
 type ElasticSearch struct {
-	Addresses []string `yaml:"addresses"`
+	Address   string
 	Username  string
 	Password  string
 	Transport ESTransport `yaml:"transport"`
@@ -53,10 +52,10 @@ type ESTransportTLS struct {
 // or "development", it will load respective config files (not implemented yet). If the environment is not recognized,
 // it loads a local config file. The function also retrieves ElasticSearch credentials from environment variables,
 // and sets them into the configuration. If any error occurs during the loading process, it returns an error.
-func MustLoadConfig(env string, esUsername string, esPassword string) (Config, error) {
+func MustLoadConfig(envs map[string]string) (Config, error) {
 	var cfg Config
 
-	switch env {
+	switch envs["env"] {
 	case "production":
 		// TODO
 
@@ -70,8 +69,10 @@ func MustLoadConfig(env string, esUsername string, esPassword string) (Config, e
 		}
 	}
 
-	cfg.ElasticSearch.Username = esUsername
-	cfg.ElasticSearch.Password = esPassword
+	cfg.Address = envs["address"]
+	cfg.ElasticSearch.Address = envs["es_address"]
+	cfg.ElasticSearch.Username = envs["es_username"]
+	cfg.ElasticSearch.Password = envs["es_password"]
 
 	return cfg, nil
 }

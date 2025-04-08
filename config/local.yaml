@@ -1,13 +1,9 @@
-host: "0.0.0.0"
-port: "8080"
 read_timeout: 10s
 write_timeout: 10s
 idle_timeout: 20s
 service_name: "simplesearch"
 
 elasticsearch:
-  addresses:
-    - "https://0.0.0.0:9200"
   transport:
     tls:
       tls_insecure: true

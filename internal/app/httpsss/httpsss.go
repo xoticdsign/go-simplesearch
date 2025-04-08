@@ -72,7 +72,7 @@ func New(log *slog.Logger, cfg utils.Config) (*App, error) {
 func (a *App) Run() error {
 	const fu = "Run()"
 
-	err := a.Server.ServerImplementation.Listen(utils.BuildAddress(a.config.Host, a.config.Port))
+	err := a.Server.ServerImplementation.Listen(a.config.Address)
 	if err != nil {
 		a.log.Warn(
 			"listening error",

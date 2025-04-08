@@ -11,7 +11,7 @@ import (
 )
 
 var (
-	ErrEnvIsNotSet = fmt.Errorf("following envs must be set: DIRECTION, MIGRATIONS, MIGRATE_DOWN_WITH_INDEX (optional), ADDRESS, USERNAME, PASSWORD")
+	ErrEnvsMustBeSpecified = fmt.Errorf("you have to specify the envs")
 )
 
 // getEnv() retrieves the necessary environment variables required for migration.
@@ -34,46 +34,29 @@ var (
 //
 // If any of these environment variables are missing, the function will return an error (ErrEnvIsNotSet),
 // indicating which variable was not set properly.
-func getEnv() (string, string, string, string, string, string, error) {
+func getEnv() (map[string]string, error) {
 	direction := os.Getenv("DIRECTION")
-	if direction == "" {
-		return "", "", "", "", "", "", ErrEnvIsNotSet
-	}
-	defer os.Unsetenv("DIRECTION")
-
 	migrations := os.Getenv("MIGRATIONS")
-	if direction == "" {
-		return "", "", "", "", "", "", ErrEnvIsNotSet
-	}
-	defer os.Unsetenv("MIGRATIONS")
-
 	migrationDownBool := os.Getenv("MIGRATE_DOWN_WITH_INDEX")
-	defer os.Unsetenv("MIGRATE_DOWN_WITH_INDEX")
+	esAddress := os.Getenv("ES_ADDRESS")
+	esUsername := os.Getenv("ES_USERNAME")
+	esPassword := os.Getenv("ES_PASSWORD")
 
-	addr := os.Getenv("ADDRESS")
-	if direction == "" {
-		return "", "", "", "", "", "", ErrEnvIsNotSet
-	}
-	defer os.Unsetenv("ADDRESS")
+	envs := make(map[string]string)
 
-	username := os.Getenv("USERNAME")
-	if direction == "" {
-		return "", "", "", "", "", "", ErrEnvIsNotSet
-	}
-	defer os.Unsetenv("USERNAME")
+	envs["direction"] = direction
+	envs["migrations"] = migrations
+	envs["migrate_down_with_index"] = migrationDownBool
+	envs["es_address"] = esAddress
+	envs["es_username"] = esUsername
+	envs["es_password"] = esPassword
 
-	password := os.Getenv("PASSWORD")
-	if direction == "" {
-		return "", "", "", "", "", "", ErrEnvIsNotSet
-	}
-	defer os.Unsetenv("PASSWORD")
-
-	return direction, migrations, migrationDownBool, addr, username, password, nil
+	return envs, nil
 }
 
 // main() is the entry point of the Migrator.
 func main() {
-	direction, migrations, migrationDownBool, addr, username, password, err := getEnv()
+	envs, err := getEnv()
 	if err != nil {
 		panic(err)
 	}
@@ -89,7 +72,7 @@ func main() {
 			Timeout: time.Second * 10,
 		},
 		ElasticSearch: goelasticmigrator.ElasticSearch{
-			Address: addr,
+			Address: envs["address"],
 			Index: goelasticmigrator.Index{
 				Name: "products",
 				Definition: map[string]interface{}{
@@ -121,27 +104,27 @@ func main() {
 				},
 			},
 			Credentials: goelasticmigrator.Credentials{
-				Username: username,
-				Password: password,
+				Username: envs["username"],
+				Password: envs["password"],
 			},
 		},
 	})
 
-	switch direction {
+	switch envs["direction"] {
 	case "up":
-		err := m.MigrateUp(migrations)
+		err := m.MigrateUp(envs["migrations"])
 		if err != nil {
 			panic(err)
 		}
 
 	case "down":
-		if migrationDownBool == "true" {
+		if envs["migrate_down_with_index"] == "true" {
 			err := m.MigrateDown(true)
 			if err != nil {
 				panic(err)
 			}
 		}
-		if migrationDownBool == "false" {
+		if envs["migrate_down_with_index"] == "false" {
 			err := m.MigrateDown(false)
 			if err != nil {
 				panic(err)

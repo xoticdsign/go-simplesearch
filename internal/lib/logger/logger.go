@@ -8,10 +8,10 @@ import (
 // Creates a new Logger.
 //
 // Environment must be specified with env variable.
-func New(env string) *slog.Logger {
+func New(envs map[string]string) *slog.Logger {
 	var log *slog.Logger
 
-	switch env {
+	switch envs["env"] {
 	case "production":
 		// TODO
 
