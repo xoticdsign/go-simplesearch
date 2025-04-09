@@ -6,9 +6,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/xoticdsign/simplesearch/internal/app/httpsss"
-	"github.com/xoticdsign/simplesearch/internal/lib/logger"
-	"github.com/xoticdsign/simplesearch/internal/utils"
+	"github.com/xoticdsign/go-simplesearch/internal/app/httpsss"
+	"github.com/xoticdsign/go-simplesearch/internal/lib/logger"
+	"github.com/xoticdsign/go-simplesearch/internal/utils"
 )
 
 const op = "app."

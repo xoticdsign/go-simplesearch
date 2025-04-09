@@ -7,10 +7,10 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 
-	"github.com/xoticdsign/simplesearch/https/simplesearch/ssv1"
-	search "github.com/xoticdsign/simplesearch/internal/services/elasticsearch"
-	"github.com/xoticdsign/simplesearch/internal/services/simplesearch"
-	"github.com/xoticdsign/simplesearch/internal/utils"
+	"github.com/xoticdsign/go-simplesearch/https/simplesearch/ssv1"
+	search "github.com/xoticdsign/go-simplesearch/internal/services/elasticsearch"
+	"github.com/xoticdsign/go-simplesearch/internal/services/simplesearch"
+	"github.com/xoticdsign/go-simplesearch/internal/utils"
 )
 
 const op = "app.SimpleSearch."

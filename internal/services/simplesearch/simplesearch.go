@@ -4,9 +4,9 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/xoticdsign/simplesearch/https/simplesearch/ssv1"
-	search "github.com/xoticdsign/simplesearch/internal/services/elasticsearch"
-	"github.com/xoticdsign/simplesearch/internal/utils"
+	"github.com/xoticdsign/go-simplesearch/https/simplesearch/ssv1"
+	search "github.com/xoticdsign/go-simplesearch/internal/services/elasticsearch"
+	"github.com/xoticdsign/go-simplesearch/internal/utils"
 )
 
 const op = "service.SimpleSearch."

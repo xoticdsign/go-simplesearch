@@ -1,4 +1,4 @@
-module github.com/xoticdsign/simplesearch
+module github.com/xoticdsign/go-simplesearch
 
 go 1.22.5
 

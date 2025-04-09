@@ -11,8 +11,8 @@ import (
 
 	"github.com/elastic/go-elasticsearch/v8"
 
-	"github.com/xoticdsign/simplesearch/https/simplesearch/ssv1"
-	"github.com/xoticdsign/simplesearch/internal/utils"
+	"github.com/xoticdsign/go-simplesearch/https/simplesearch/ssv1"
+	"github.com/xoticdsign/go-simplesearch/internal/utils"
 )
 
 const op = "service.ElasticSearch."

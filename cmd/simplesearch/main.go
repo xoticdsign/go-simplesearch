@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/xoticdsign/simplesearch/internal/app"
+	"github.com/xoticdsign/go-simplesearch/internal/app"
 )
 
 /*
